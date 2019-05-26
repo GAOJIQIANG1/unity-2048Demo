@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         GestureRecognition.gestureRecognitionInstance.move += OnMove;
+        LoseUI.SetActive(false);
         gameObject.AddComponent<InputController>();
         gameNums = new GameNums();
         Map.MapInstance.initMap();
